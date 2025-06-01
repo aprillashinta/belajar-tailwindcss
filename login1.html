@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/styles.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section
+      id="loginPage"
+      class="w-full h-screen flex items-center justify-center bg-white"
+    >
+      <form class="w-full max-w-md h-auto bg-gray-800 border-1 rounded-md p-5">
+        <div class="textbox p-5">
+          <h1 class="font-bold text-2xl text-center text-white">Login Page</h1>
+        </div>
+        <div class="form-group">
+          <label for="email" class="font-bold text-white">Email</label>
+          <input
+            type="text"
+            class="w-full p-2 border border-gray-400 rounded-md focus:outline-none focus:border-blue-500 placeholder-white bg-gray-700 text-white"
+            id="email"
+            placeholder="Enter your email"
+          />
+          <!-- placeholder-[#EFE4D2]" -->
+          <label for="password" class="font-bold text-white mt-2"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            class="w-full p-2 border border-gray-400 rounded-md focus:outline-none focus:border-blue-500 placeholder-white bg-gray-700 text-white"
+          />
+          <div class="link-wrappe mt-5">
+            <p class="text-white">
+              Lupa Password?
+              <a href="#" class="text-blue-300 hover:underline"
+                >Reset password</a
+              >
+            </p>
+          </div>
+          <!-- <button class="dark:md:hover:bg-fuchsia-600">Sign In</button> -->
+          <button
+            class="w-full mt-5 bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            Login Page
+          </button>
+        </div>
+      </form>
+    </section>
+    <!-- 
+    </div>
+    <h1 class="text-3xl font-bold underline">login page</h1>
+    <div class="form-group">
+        <label for="email" class="font-bold">Email</label>
+    </div> -->
+  </body>
+</html>
