@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentasi Tailwind - Komponen Tambahan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              cream: '#fdf6e3',
+              dark: '#1a1a1a',
+              accent: '#ffb347',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-cream text-dark dark:bg-dark dark:text-cream font-sans h-screen overflow-hidden">
+    <div class="h-full flex">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white dark:bg-[#121212] p-6 border-r border-gray-200 dark:border-gray-700 hidden md:block overflow-y-auto">
+        <h1 class="text-2xl font-bold mb-6">📘 Dokumentasi</h1>
+        <nav class="space-y-4 text-sm">
+          <a href="#install" class="block hover:text-accent">Instalasi</a>
+          <a href="#utility" class="block hover:text-accent">Utility Class</a>
+          <a href="#komponen" class="block hover:text-accent">Komponen UI</a>
+          <a href="#form" class="block hover:text-accent">Form Input</a>
+          <a href="#card" class="block hover:text-accent">Card Component</a>
+          <a href="#navbar" class="block hover:text-accent">Navbar</a>
+          <a href="#tabel" class="block hover:text-accent">Tabel</a>
+          <a href="#darkmode" class="block hover:text-accent">Toggle Mode</a>
+          <a href="#grid" class="block hover:text-accent">Grid</a>
+          <a href="#typography" class="block hover:text-accent">Typography</a>
+          <a href="#buttonvariants" class="block hover:text-accent">Button Variants</a>
+          <a href="#alert" class="block hover:text-accent">Alert</a>
+          <a href="#badge" class="block hover:text-accent">Badge</a>
+          <a href="#modall" class="block hover:text-accent">Modal</a>
+          <a href="#accordion" class="block hover:text-accent">Accordion</a>
+          <a href="#progress" class="block hover:text-accent">Progress</a>
+          <a href="#spinner" class="block hover:text-accent">Spinner</a>
+          <a href="#responsive" class="block hover:text-accent">Responsive Text</a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="flex-1 overflow-y-auto p-6 md:p-10">
+        <!-- Instalasi Section -->
+        <section id="install" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Instalasi</h2>
+          <p class="mb-2">Gunakan Tailwind melalui CDN atau setup via PostCSS dan framework favorit kamu.</p>
+          <pre class="bg-gray-100 dark:bg-[#1e1e1e] rounded">
+            &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+          </pre>
+        </section>
+
+        <!-- Utility Class Section -->
+        <section id="utility" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Utility Classes</h2>
+          <!-- <ul class="list-disc pl-6 space-y-1 text-sm grid grid-cols-2"> -->
+          <ul class="list-disc pl-6 space-y-1 gap-x-5 text-sm columns-1 md:columns-2 md:columns-3">
+            <!-- SPACING (Padding & Margin) -->
+            <li><code>p-4</code>: Padding 1rem di semua sisi</li>
+            <li><code>pt-2</code>: Padding atas 0.5rem</li>
+            <li><code>pb-6</code>: Padding bawah 1.5rem</li>
+            <li><code>pl-8</code>: Padding kiri 2rem</li>
+            <li><code>pr-3</code>: Padding kanan 0.75rem</li>
+            <li><code>m-4</code>: Margin 1rem di semua sisi</li>
+            <li><code>mt-2</code>: Margin atas 0.5rem</li>
+            <li><code>mb-6</code>: Margin bawah 1.5rem</li>
+            <li><code>ml-8</code>: Margin kiri 2rem</li>
+            <li><code>mr-3</code>: Margin kanan 0.75rem</li>
+            <li><code>space-x-4</code>: Jarak horizontal antar elemen anak 1rem</li>
+            <li><code>space-y-2</code>: Jarak vertikal antar elemen anak 0.5rem</li>
+
+            <!-- COLORS (Background & Text) -->
+            <li><code>bg-cream</code>: Latar belakang cream (custom)</li>
+            <li><code>bg-gray-100</code>: Latar abu muda</li>
+            <li><code>bg-blue-500</code>: Latar biru terang</li>
+            <li><code>hover:bg-blue-500</code>: Warna latar saat hover</li>
+            <li><code>text-dark</code>: Warna teks gelap (custom)</li>
+            <li><code>text-gray-700</code>: Teks abu gelap</li>
+            <li><code>text-red-500</code>: Teks merah terang</li>
+            <li><code>text-white</code>: Teks putih</li>
+            <li><code>hover:text-black</code>: Warna teks saat hover</li>
+
+            <!-- TYPOGRAPHY -->
+            <li><code>text-xs</code>: Ukuran teks sangat kecil</li>
+            <li><code>text-sm</code>: Ukuran teks kecil</li>
+            <li><code>text-base</code>: Ukuran teks normal</li>
+            <li><code>text-lg</code>: Ukuran teks besar</li>
+            <li><code>text-xl</code>: Ukuran teks ekstra besar</li>
+            <li><code>font-light</code>: Teks tipis</li>
+            <li><code>font-normal</code>: Teks normal</li>
+            <li><code>font-semibold</code>: Semi-bold</li>
+            <li><code>font-bold</code>: Teks tebal</li>
+            <li><code>uppercase</code>: Huruf kapital semua</li>
+            <li><code>lowercase</code>: Huruf kecil semua</li>
+            <li><code>capitalize</code>: Kapital di awal kata</li>
+            <li><code>underline</code>: Garis bawah</li>
+            <li><code>line-through</code>: Coret teks</li>
+
+            <!-- LAYOUT -->
+            <li><code>flex</code>: Aktifkan flexbox</li>
+            <li><code>inline-flex</code>: Flex tapi inline</li>
+            <li><code>grid</code>: Aktifkan grid</li>
+            <li><code>grid-cols-2</code>: Dua kolom</li>
+            <li><code>items-center</code>: Vertikal tengah</li>
+            <li><code>justify-center</code>: Horizontal tengah</li>
+            <li><code>justify-between</code>: Jarak antar elemen</li>
+            <li><code>gap-4</code>: Jarak antar elemen dalam flex/grid</li>
+            <li><code>hidden</code>: Sembunyikan elemen</li>
+            <li><code>block</code>: Tampilkan sebagai blok</li>
+            <li><code>inline-block</code>: Gabungan inline dan block</li>
+
+            <!-- SIZING -->
+            <li><code>w-full</code>: Lebar 100%</li>
+            <li><code>max-w-md</code>: Lebar maksimal 28rem</li>
+            <li><code>min-h-screen</code>: Tinggi minimal 100vh</li>
+            <li><code>h-10</code>: Tinggi tetap 2.5rem</li>
+            <li><code>aspect-square</code>: Aspek rasio 1:1</li>
+
+            <!--  ALIGNMENT & POSITIONING -->
+            <li><code>text-left</code>: Teks rata kiri</li>
+            <li><code>text-center</code>: Teks rata tengah</li>
+            <li><code>text-right</code>: Teks rata kanan</li>
+            <li><code>absolute</code>: Posisi absolut</li>
+            <li><code>relative</code>: Posisi relatif</li>
+            <li><code>top-0</code>: Jarak atas 0</li>
+            <li><code>left-4</code>: Jarak kiri 1rem</li>
+
+            <!-- EFFECTS -->
+            <li><code>shadow</code>: Bayangan dasar</li>
+            <li><code>shadow-md</code>: Bayangan sedang</li>
+            <li><code>shadow-lg</code>: Bayangan besar</li>
+            <li><code>rounded</code>: Border radius 0.25rem</li>
+            <li><code>rounded-lg</code>: Border radius besar</li>
+            <li><code>rounded-full</code>: Bentuk bulat penuh</li>
+
+            <!-- INTERACTIVITY & ANIMATION -->
+            <li><code>hover:bg-blue-500</code>: Background saat hover</li>
+            <li><code>hover:text-white</code>: Teks saat hover</li>
+            <li><code>focus:outline-none</code>: Hilangkan outline saat fokus</li>
+            <li><code>transition</code>: Aktifkan transisi</li>
+            <li><code>duration-300</code>: Durasi 300ms</li>
+            <li><code>ease-in-out</code>: Pola transisi halus</li>
+            <li><code>cursor-pointer</code>: Kursor menjadi tangan</li>
+
+          </ul>
+        </section>
+
+        <!-- Komponen UI Section -->
+        <section id="komponen" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Komponen UI</h2>
+          <p>Contoh tombol custom:</p>
+          <button class="mt-4 px-4 py-2 bg-accent text-white rounded-lg shadow hover:opacity-90">
+            Tombol Babe
+          </button>
+        </section>
+
+        <!-- Form Input Section -->
+        <section id="form" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Form Input</h2>
+          <form class="space-y-4">
+            <div>
+              <label for="nama" class="block text-sm font-medium mb-1">Nama:</label>
+              <input type="text" id="nama" name="nama" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-accent" placeholder="Masukkan nama">
+            </div>
+            <div>
+              <label for="pesan" class="block text-sm font-medium mb-1">Pesan:</label>
+              <textarea id="pesan" name="pesan" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-accent" placeholder="Tulis pesanmu"></textarea>
+            </div>
+            <button type="submit" class="px-4 py-2 bg-accent text-white rounded shadow hover:opacity-90">Kirim</button>
+          </form>
+        </section>
+
+        <!-- Card Component Section -->
+        <section id="card" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Card Component</h2>
+          <div class="max-w-sm rounded overflow-hidden shadow-lg mt-4">
+            <img class="w-full" src="https://via.placeholder.com/400x200" alt="Gambar placeholder">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Judul Card</div>
+              <p class="text-gray-700 dark:text-gray-300 text-base">
+                Deskripsi singkat atau konten card yang menjelaskan informasi secara ringkas.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Navbar Section -->
+        <section id="navbar" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Navbar</h2>
+          <nav class="bg-white dark:bg-[#121212] shadow p-4 mt-4">
+            <ul class="flex space-x-4">
+              <li><a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-accent">Beranda</a></li>
+              <li><a href="dashboard.html" class="text-gray-700 dark:text-gray-300 hover:text-accent">Dashboard</a></li>
+              <li><a href="docs.html" class="text-gray-700 dark:text-gray-300 hover:text-accent">Dokumentasi</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- Tabel Section -->
+        <section id="tabel" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Tabel</h2>
+          <div class="overflow-x-auto mt-4">
+            <table class="min-w-full text-sm text-left border border-gray-200 dark:border-gray-700">
+              <thead class="bg-gray-100 dark:bg-[#1e1e1e] text-gray-700 dark:text-gray-300">
+                <tr>
+                  <th class="px-6 py-3 border-b">#</th>
+                  <th class="px-6 py-3 border-b">Nama</th>
+                  <th class="px-6 py-3 border-b">Email</th>
+                  <th class="px-6 py-3 border-b">Status</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white dark:bg-[#121212] text-gray-800 dark:text-gray-200">
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
+                  <td class="px-6 py-4 border-b">1</td>
+                  <td class="px-6 py-4 border-b">Babe Cantik</td>
+                  <td class="px-6 py-4 border-b">babe@email.com</td>
+                  <td class="px-6 py-4 border-b"><span class="px-2 py-1 text-xs bg-green-200 dark:bg-green-700 text-green-800 dark:text-green-100 rounded-full">Aktif</span></td>
+                </tr>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
+                  <td class="px-6 py-4 border-b">2</td>
+                  <td class="px-6 py-4 border-b">Babe Ganteng</td>
+                  <td class="px-6 py-4 border-b">ganteng@email.com</td>
+                  <td class="px-6 py-4 border-b"><span class="px-2 py-1 text-xs bg-red-200 dark:bg-red-700 text-red-800 dark:text-red-100 rounded-full">Nonaktif</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Toggle Mode Section -->
+        <section id="darkmode" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Toggle Mode</h2>
+          <div class="flex items-center gap-3">
+            <span id="theme-icon" class="text-2xl">🌞</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="toggle-theme" class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+            </label>
+          </div>
+        </section>
+
+        <!-- Grid System Section -->
+        <section id="grid" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Grid System</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-accent text-white p-4 rounded">Grid Item 1</div>
+            <div class="bg-accent text-white p-4 rounded">Grid Item 2</div>
+            <div class="bg-accent text-white p-4 rounded">Grid Item 3</div>
+          </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Typography</h2>
+          <h1 class="text-4xl font-bold">Heading 1</h1>
+          <h2 class="text-3xl font-semibold">Heading 2</h2>
+          <p class="text-base mt-2">Ini adalah paragraf biasa dengan ukuran teks standar.</p>
+          <p class="text-sm italic text-gray-500">Keterangan atau catatan kecil.</p>
+        </section>
+
+        <!-- Button Variants Section -->
+        <section id="buttonvariants" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Button Variants</h2>
+
+          <!-- Primary -->
+          <button class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out bg-blue-600 rounded-full shadow-md group hover:ring-2 hover:ring-blue-300 hover:bg-blue-700">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></span>
+            <span class="relative z-10">Primary</span>
+          </button>
+
+          <!-- Secondary -->
+          <button class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium text-gray-800 transition duration-300 ease-out bg-gray-100 border border-gray-300 rounded-full shadow-sm group hover:bg-gray-200 hover:ring-2 hover:ring-gray-400">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-white to-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></span>
+            <span class="relative z-10">Secondary</span>
+          </button>
+
+          <!-- Danger -->
+          <button class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out bg-red-600 rounded-full shadow-md group hover:ring-2 hover:ring-red-400 hover:bg-red-700">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></span>
+            <span class="relative z-10">Danger</span>
+          </button>
+        </section>
+
+        <!-- Alert Section -->
+        <section id="alert" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Alerts</h2>
+
+          <!-- Success Alert -->
+          <div class="flex items-start bg-green-100 text-green-800 p-4 rounded border-l-4 border-green-500 mb-3 relative">
+            <span class="mr-2 text-xl">✅</span>
+            <p class="flex-1">Berhasil! Data kamu sudah disimpan dengan aman.</p>
+            <button class="absolute top-2 right-3 text-green-800 hover:text-green-900">&times;</button>
+          </div>
+
+          <!-- Warning Alert -->
+          <div class="flex items-start bg-yellow-100 text-yellow-800 p-4 rounded border-l-4 border-yellow-500 mb-3 relative">
+            <span class="mr-2 text-xl">⚠️</span>
+            <p class="flex-1">Peringatan! Cek kembali inputan kamu sebelum lanjut.</p>
+            <button class="absolute top-2 right-3 text-yellow-800 hover:text-yellow-900">&times;</button>
+          </div>
+
+          <!-- Info Alert -->
+          <div class="flex items-start bg-blue-100 text-blue-800 p-4 rounded border-l-4 border-blue-500 mb-3 relative">
+            <span class="mr-2 text-xl">ℹ️</span>
+            <p class="flex-1">Info: Jangan lupa verifikasi email kamu ya!</p>
+            <button class="absolute top-2 right-3 text-blue-800 hover:text-blue-900">&times;</button>
+          </div>
+
+          <!-- Danger Alert -->
+          <div class="flex items-start bg-red-100 text-red-800 p-4 rounded border-l-4 border-red-500 relative">
+            <span class="mr-2 text-xl">❌</span>
+            <p class="flex-1">Error! Terjadi kesalahan saat memproses permintaanmu.</p>
+            <button class="absolute top-2 right-3 text-red-800 hover:text-red-900">&times;</button>
+          </div>
+        </section>
+
+        <!-- Badge Section -->
+        <section id="badge" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Badge</h2>
+          <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">New</span>
+          <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Active</span>
+        </section>
+
+        <!-- Modal Trigger -->
+        <section id="modall" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Modal</h2>
+          <button
+            id="openModalBtn"
+            class="px-4 py-2 bg-accent text-white rounded hover:opacity-90"
+          >
+            Buka Modal
+          </button>
+        </section>
+
+        <!-- Modal -->
+        <div
+          id="modal"
+          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+          aria-hidden="true"
+        >
+          <div
+            class="bg-white dark:bg-[#1e1e1e] rounded-lg shadow-lg w-full max-w-md p-6 relative"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+          >
+            <h3
+              id="modalTitle"
+              class="text-lg font-semibold mb-2 text-dark dark:text-white"
+            >
+              Judul Modal
+            </h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              haiiiiii nama aku babe!
+              nama kamu sapaa?
+            </p>
+            <div class="mt-4 text-right">
+              <button
+                id="closeModalBtn"
+                class="px-4 py-2 bg-gray-300 dark:bg-gray-700 text-dark dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600"
+              >
+                Tutup
+              </button>
+            </div>
+            <!-- Close Icon -->
+            <button
+              id="closeModalIcon"
+              class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
+              aria-label="Tutup modal"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Accordion Section -->
+        <section id="accordion" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Accordion</h2>
+          <div>
+            <button onclick="document.getElementById('panel').classList.toggle('hidden')" class="bg-accent text-white px-4 py-2 rounded">Toggle Konten</button>
+            <div id="panel" class="mt-2 hidden">
+              <p class="p-4 bg-gray-100 dark:bg-[#1e1e1e] rounded">Konten tersembunyi ini muncul saat accordion dibuka.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Progress Bar Section -->
+        <section id="progress" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Progress Bar</h2>
+          <div class="w-full bg-gray-200 rounded-full h-4">
+            <div class="bg-accent h-4 rounded-full" style="width: 70%"></div>
+          </div>
+        </section>
+
+        <!-- Spinner Section -->
+        <section id="spinner" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Loading Spinner</h2>
+          
+          <div class="flex items-center gap-10">
+            <!-- Spinner Simple -->
+            <div class="animate-spin rounded-full h-8 w-8 border-t-3 border-b-2 border-accent"></div>
+
+            <!-- Spinner Variasi 1: Dual Ring -->
+            <div class="relative w-8 h-8">
+              <div class="absolute inset-0 border-4 border-accent border-t-transparent border-b-transparent rounded-full animate-spin"></div>
+            </div>
+
+            <!-- Spinner Variasi 2: Dot Bounce -->
+            <div class="flex items-center space-x-1">
+              <div class="w-2 h-2 bg-accent rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div class="w-2 h-2 bg-accent rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div class="w-2 h-2 bg-accent rounded-full animate-bounce"></div>
+            </div>
+
+            <!-- Spinner Variasi 3: Pulse Circle -->
+            <div class="relative flex items-center justify-center w-8 h-8">
+              <div class="absolute inline-flex w-full h-full rounded-full bg-accent opacity-75 animate-ping"></div>
+              <div class="relative inline-flex rounded-full w-4 h-4 bg-accent"></div>
+            </div>
+
+            <!-- Spinner Variasi 4: Bars Loading -->
+            <div class="flex items-end gap-1">
+              <div class="w-1 h-4 bg-accent animate-[grow_0.8s_ease-in-out_infinite]"></div>
+              <div class="w-1 h-6 bg-accent animate-[grow_0.8s_ease-in-out_infinite_0.1s]"></div>
+              <div class="w-1 h-3 bg-accent animate-[grow_0.8s_ease-in-out_infinite_0.2s]"></div>
+              <div class="w-1 h-5 bg-accent animate-[grow_0.8s_ease-in-out_infinite_0.3s]"></div>
+              <style>
+              @keyframes grow {
+                0%, 100% {
+                  transform: scaleY(0.5);
+                }
+                50% {
+                  transform: scaleY(1.5);
+                }
+              }
+              </style>
+            </div>
+
+            <!-- Spinner Variasi 5: Dot Bounce -->
+            <div class="flex items-center space-x-2">
+              <div class="w-3 h-3 bg-accent rounded-full animate-[bounce_0.6s_infinite]"></div>
+              <div class="w-3 h-3 bg-accent rounded-full animate-[bounce_0.6s_infinite] [animation-delay:0.2s]"></div>
+              <div class="w-3 h-3 bg-accent rounded-full animate-[bounce_0.6s_infinite] [animation-delay:0.4s]"></div>
+              <style>
+              @keyframes bounce {
+                0%, 100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+              }
+              </style>
+            </div>  
+
+          </div>
+        </section>
+
+
+        <!-- Responsive Design Section -->
+        <section id="responsive" class="mb-10">
+          <h2 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">Responsive Design</h2>
+          <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            Ubah ukuran layar untuk melihat perubahan ukuran teks.
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script>
+      const toggleTheme = document.getElementById('toggle-theme');
+      const themeIcon = document.getElementById('theme-icon');
+      const html = document.documentElement;
+
+      if (
+        localStorage.theme === 'dark' ||
+        (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        html.classList.add('dark');
+        toggleTheme.checked = true;
+        themeIcon.textContent = '🌙';
+      } else {
+        html.classList.remove('dark');
+        toggleTheme.checked = false;
+        themeIcon.textContent = '🌞';
+      }
+
+      toggleTheme.addEventListener('change', () => {
+        if (toggleTheme.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          themeIcon.textContent = '🌙';
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          themeIcon.textContent = '🌞';
+        }
+      });
+    </script>
+    <script>
+      // Modal toggle
+      const modal = document.getElementById('modal');
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const closeModalIcon = document.getElementById('closeModalIcon');
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      openModalBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+      });
+
+      closeModalBtn.addEventListener('click', closeModal);
+      closeModalIcon.addEventListener('click', closeModal);
+
+      // Close modal when clicking outside modal content
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Optional: close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+    </script>
+
+  </body>
+</html>
